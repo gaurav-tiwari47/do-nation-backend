@@ -15,8 +15,11 @@ router.post('/admin/login',Admin.login)
 //All Ngo routes
 router.post('/ngo/add',NGO.addNgo)
 router.put('/ngo/verify',NGO.verifyNgo)
+router.get('/ngo/totaldontaion/:ngoid',NGO.totalDonation)
 
 //All Donation routes
 router.post('/ngo/donation',Donations.createDonation)
+router.get('/ngo/donation/id/:id',Donations.getDonationById)
+router.get('/ngo/donation/user/:user',Donations.getDonationByUser)
 
 module.exports = router;

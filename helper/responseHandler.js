@@ -1,5 +1,10 @@
 exports.responseHandler = (res, status = 200, data = null, message = '', success = true) => {
-  console.log(`🚀 ~ status: ${status}, data: ${JSON.stringify(data)}, message: ${message}, success: ${success}`);
+  const response = {
+    success,
+    data,
+    message,
+  }
+  console.log('Response ==> ',response)
   return res.status(status).json({
     success: success,
     data: data,

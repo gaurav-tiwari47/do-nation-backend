@@ -13,6 +13,11 @@ const donationSchema = new mongoose.Schema({
     type:String,
     required:true
   },
+  transactionId:{
+    type:String,
+    unique:true,
+    required:true,
+  },
   donationType:{
     type:String,
     enum:['quick-donation','subscription-donation'],
